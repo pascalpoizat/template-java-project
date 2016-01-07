@@ -11,6 +11,7 @@ buildscript {
     }
 }
 
+apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
