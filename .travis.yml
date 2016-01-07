@@ -9,12 +9,5 @@ jdk:
   - oraclejdk8
 
 script:
-  - ./gradlew assemble check jacocoTestReport coveralls
+  - ./gradlew check jacocoTestReport coveralls
 
-before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
