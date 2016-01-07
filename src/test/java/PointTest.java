@@ -22,7 +22,8 @@ public class PointTest {
 
     @org.testng.annotations.Test
     public void testGetX() throws Exception {
-
+        Point p = new Point(3,4);
+        assertEquals(p.getX(), 3);
     }
 
     @org.testng.annotations.Test
