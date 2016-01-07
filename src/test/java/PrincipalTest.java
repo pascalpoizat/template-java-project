@@ -21,6 +21,7 @@ public class PrincipalTest {
 
     @Test
     public void testMain() throws Exception {
+        Principal p = new Principal();
         String args[] = {};
         Principal.main(args);
     }
