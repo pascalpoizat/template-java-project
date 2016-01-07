@@ -1,0 +1,50 @@
+group 'fr.uparis10.pascalpoizat'
+version '0.1'
+
+buildscript {
+    dependencies {
+        classpath 'org.ajoberstar:gradle-jacoco:0.1.0'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'application'
+apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
+
+
+mainClassName = 'Principal'
+
+defaultTasks 'run'
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+test {
+    useTestNG()
+    include '**'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
+}
+
+dependencies {
+    testCompile "org.testng:testng:6.9.10"
+}
+
+repositories {
+    mavenCentral()
+}
+sourceSets {
+    main.java.srcDirs += 'src/main/java'
+}
