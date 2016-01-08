@@ -5,19 +5,37 @@ buildscript {
     dependencies {
         classpath 'org.ajoberstar:gradle-jacoco:0.1.0'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
+        classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
     }
     repositories {
         mavenCentral()
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+        // you can also use this for your local cache:
+        // mavenLocal()
     }
 }
 
-apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
+apply plugin: 'org.sonarqube'
 apply plugin: 'com.github.kt3k.coveralls'
 
+dependencies {
+    testCompile "org.testng:testng:6.9.10"
+    compile "org.apache.logging.log4j:log4j-api:2.5"
+    compile "org.apache.logging.log4j:log4j-core:2.5"
+    compile "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.5.0"
+}
 
-mainClassName = 'Principal'
+repositories {
+    mavenCentral()
+    // you can also use this for your local cache:
+    // mavenLocal()
+}
+
+mainClassName = 'fr.paris10.pascalpoizat.templates.javaproject.Principal'
 
 defaultTasks 'run'
 
@@ -39,13 +57,10 @@ jacocoTestReport {
     }
 }
 
-dependencies {
-    testCompile "org.testng:testng:6.9.10"
-}
-
-repositories {
-    mavenCentral()
-}
-sourceSets {
-    main.java.srcDirs += 'src/main/java'
+sonarqube {
+    properties {
+        //property "sonar.projectName", "PROJECT NAME"
+        //property "sonar.projectKey", "PROJECT KEY"
+        property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+    }
 }

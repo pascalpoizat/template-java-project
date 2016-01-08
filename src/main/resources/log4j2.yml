@@ -1,0 +1,17 @@
+Configuration:
+  status: warn
+
+  Appenders:
+
+    Console:
+      name: ConsoleBrief
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "%msg%n"
+
+  Loggers:
+
+    Root:
+      level: info
+      AppenderRef:
+        ref: ConsoleBrief

@@ -1,3 +1,10 @@
+package fr.paris10.pascalpoizat.templates.javaproject;
+
+import fr.paris10.pascalpoizat.templates.javaproject.Principal;
+import org.testng.annotations.Test;
+
+import java.lang.reflect.Constructor;
+
 /**
  * template-java-project
  * Copyright 2015 pascalpoizat
@@ -15,9 +22,11 @@
  * limitations under the License.
  */
 
-public class Principal {
-    public static void main(String[] args) {
-        Point p = new Point(3, 4);
-        System.out.println(p);
+public class PrincipalTest {
+
+    @Test
+    public void testMain() throws Exception {
+        String args[] = {};
+        Principal.main(args);
     }
 }
