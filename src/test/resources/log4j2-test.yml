@@ -12,6 +12,6 @@ Configuration:
   Loggers:
 
     Root:
-      level: warn
+      level: trace
       AppenderRef:
         ref: Console
