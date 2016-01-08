@@ -4,7 +4,7 @@ Template for an Open Source Java project
 [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](LICENSE)<br/>
 [![Build Status](https://travis-ci.org/pascalpoizat/template-java-project.svg?branch=master)](https://travis-ci.org/pascalpoizat/template-java-project)
 [![Coverage Status](https://coveralls.io/repos/pascalpoizat/template-java-project/badge.svg?branch=master&service=github)](https://coveralls.io/github/pascalpoizat/template-java-project?branch=master)
-[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-green.svg)](TECHNICALDEBT)<br/>
+[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)
 
 ## dependencies
 
@@ -22,6 +22,18 @@ All the following dependencies are free provided your project is Open Source.
     We use [Travis CI](https://travis-ci.org/) and its connection to GitHub.
     See [here](https://docs.travis-ci.com/user/for-beginners) how to activate this for your project.
     Then, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
+
+- Code Analysis
+
+    We use [SonarQube](http://www.sonarqube.org/) for code analysis.
+    **This is not included in the works made by Travis CI.**
+    Therefore you have to run Gradle target ```sonarqube```.
+    By default the ```build.gradle``` file works with a local SonarCube server on ```localhost:9000```.
+    You will have to install and run your own server there or
+    if you have access to another one to complete the information in ```build.gradle```.
+    More information is [here](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner+for+Gradle)
+    (note that Gradle includes a SonarCube plugin but it will be removed in Gradle 3.0).
+    The technical badge is not generated automatically. You will have to change the value by hand each time you run SonarCube (this is too bad).
 
 - Test Coverage
 
@@ -47,9 +59,7 @@ All the following dependencies are free provided your project is Open Source.
 
 - Licence Badges
 
-    We use [shields.io](https://img.shields.io) to generate the Licence badge.
-
-- Code Analysis (soon ...)
+    We use [shields.io](https://img.shields.io) to generate the Licence and the Technical Debt badge.
 
 - Documentation (soon ...)
 
