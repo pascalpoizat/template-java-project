@@ -15,3 +15,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# note: some other rules could/should be in your HOME .gitignore_global file
+# *~
+# .DS_Store
