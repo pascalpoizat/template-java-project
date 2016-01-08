@@ -1,8 +1,10 @@
-[![Build Status](https://travis-ci.org/pascalpoizat/template-java-project.svg?branch=master)](https://travis-ci.org/pascalpoizat/template-java-project)
-[![Coverage Status](https://coveralls.io/repos/pascalpoizat/template-java-project/badge.svg?branch=master&service=github)](https://coveralls.io/github/pascalpoizat/template-java-project?branch=master)
-[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](LICENSE)
 # template-java-project
 Template for an Open Source Java project
+
+[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](LICENSE)<br/>
+[![Build Status](https://travis-ci.org/pascalpoizat/template-java-project.svg?branch=master)](https://travis-ci.org/pascalpoizat/template-java-project)
+[![Coverage Status](https://coveralls.io/repos/pascalpoizat/template-java-project/badge.svg?branch=master&service=github)](https://coveralls.io/github/pascalpoizat/template-java-project?branch=master)
+[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-green.svg)](TECHNICALDEBT)<br/>
 
 ## dependencies
 
@@ -35,9 +37,9 @@ All the following dependencies are free provided your project is Open Source.
 
 - Logging
 
-    We use[Apache Log4j 2](http://logging.apache.org/log4j/2.x/) for logging.
+    We use [Apache Log4j 2](http://logging.apache.org/log4j/2.x/) for logging.
     A very basic set configuration files, in YAML format, is provided.
-    More information this [here](http://logging.apache.org/log4j/2.x/manual/configuration.html).
+    More information is [here](http://logging.apache.org/log4j/2.x/manual/configuration.html).
     Note the use of distinct configurations files for the run (```src/main/resources/log4j2.yml```) and for the test (```src/main/resources/log4j2-test.yml```).
     This enables you, e.g., to log different things and present them in different ways in test or in production.
     Of course different logging APIs can be used instead of Log4j.
