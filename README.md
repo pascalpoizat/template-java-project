@@ -3,3 +3,11 @@
 [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](LICENSE)
 # template-java-project
 Template for a Java project
+
+# Issues
+
+## TODO
+
+- [ ] change license button shape to round
+
+## DONE
