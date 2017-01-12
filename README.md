@@ -1,10 +1,13 @@
 # template-java-project
-Template for an Open Source Java project
 
-[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](LICENSE)<br/>
-[![Build Status](https://travis-ci.org/pascalpoizat/template-java-project.svg?branch=master)](https://travis-ci.org/pascalpoizat/template-java-project)
-[![Coverage Status](https://coveralls.io/repos/pascalpoizat/template-java-project/badge.svg?branch=master&service=github)](https://coveralls.io/github/pascalpoizat/template-java-project?branch=master)
-[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)
+[![Build Status](https://img.shields.io/travis/pascalpoizat/template-java-project/master.svg?style=flat-square)](https://travis-ci.org/pascalpoizat/template-java-project)
+[![Code Coverage](https://img.shields.io/coveralls/pascalpoizat/template-java-project/master.svg?style=flat-square)](https://coveralls.io/github/pascalpoizat/template-java-project)
+[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat-square)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.1.0.0-blue.svg?label=version&style=flat-square)](build.gradle)<br/>
+[![Codacy Project Certification](https://img.shields.io/codacy/grade/50068fe969da4f8da9895ed9bd9e7897.svg?style=flat-square)](https://www.codacy.com/app/pascalpoizat/template-java-project/dashboard)
+[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg?style=flat-square)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)
+
+Template for an Open Source Java project
 
 ## dependencies
 
@@ -22,10 +25,14 @@ All the following dependencies are free provided your project is Open Source.
     We use [Travis CI](https://travis-ci.org/) and its connection to GitHub.
     See [here](https://docs.travis-ci.com/user/for-beginners) how to activate this for your project.
     Then, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
+    
+- Issues (using [Waffle](https://waffle.io) soon ...)
 
 - Code Analysis
 
-    We use [SonarQube](http://www.sonarqube.org/) for code analysis.
+	We use [Codacy](https://www.codacy.com) for code analysis. See [here](https://github.com/integrations/codacy) how to activate this for your project.
+	
+    We also use [SonarQube](http://www.sonarqube.org/) for code analysis.
     **This is not included in the works made by Travis CI.**
     Therefore you have to run Gradle target ```sonarqube```.
     By default the ```build.gradle``` file works with a local SonarCube server on ```localhost:9000```.
@@ -59,8 +66,8 @@ All the following dependencies are free provided your project is Open Source.
 
 - Licence Badges
 
-    We use [shields.io](https://img.shields.io) to generate the Licence and the Technical Debt badge.
-
+    We use [shields.io](https://img.shields.io) to generate the badges.
+    
 - Documentation (soon ...)
 
 - Web Site (soon ...)
