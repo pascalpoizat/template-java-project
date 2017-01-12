@@ -1,7 +1,5 @@
 package fr.paris10.pascalpoizat.templates.javaproject;
 
-import fr.paris10.pascalpoizat.templates.javaproject.Point;
-
 import static org.testng.Assert.*;
 
 /**

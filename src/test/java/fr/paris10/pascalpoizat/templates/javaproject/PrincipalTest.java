@@ -1,9 +1,6 @@
 package fr.paris10.pascalpoizat.templates.javaproject;
 
-import fr.paris10.pascalpoizat.templates.javaproject.Principal;
 import org.testng.annotations.Test;
-
-import java.lang.reflect.Constructor;
 
 /**
  * template-java-project
