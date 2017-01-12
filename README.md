@@ -53,6 +53,8 @@ All the following dependencies are free provided your project is Open Source.
     We use [Coveralls](https://coveralls.io/) to produce test coverage history and statistics.
     See [here](https://coveralls.zendesk.com/hc/en-us) how to activate this for your project.
     Then, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
+    
+    Coverage information can be sent to Codacy (soon ...)
 
 - Logging
 
