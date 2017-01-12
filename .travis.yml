@@ -8,6 +8,13 @@ sudo: false
 jdk:
   - oraclejdk8
 
+before-script:
+  - curl https://www.jpm4j.org/install/script | sh
+  - jpm install com.codacy:codacy-coverage-reporter:assembly
+
 script:
   - ./gradlew check jacocoTestReport coveralls
 
+after-script:
+  - export CODACY_PROJECT_TOKEN=1714e1023d82400591d2d3c1a6bd94ae
+  - codacy-coverage-reporter -l Java -r coverage.xml
