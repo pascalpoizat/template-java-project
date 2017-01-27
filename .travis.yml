@@ -1,5 +1,6 @@
-# configuration file for Travis-CI
-# https://travis-ci.org
+env:
+  matrix:
+    secure: Wtkq/A1kbxu1Bj+Ug6gOh89JBesZdl0Jo2mnf8fAoIXSBTjofWky/aZAfccRM0yGZoW9Pf+g/483MO1M/rwlDGjk8glZr20cJcdN9Ua03BgcJQH/65Z1rNtngoMt/YZ/Cx2o9J3wUp/z4c4kM0udAWfyStNFgzf0xK8jHBLrIpRJuCjqj5nOzwWZguAD3H6WCmk5Ufm2z28w+OzWBJAsK27xlMakNyVuE3zQzutzdDBZKcRgdIM1t9WTPS7W2zuHCc0/5crgbuae0LHeZ6J10ftgMSa9Z+MCdsK1v0RtXnha49HnxMXpaWXjzkf+PWcvvCybKM3nh9PCnJdmdX7BaLzBnIU5tJcC37EAPudNck8kKRW75OXZ3EY7vDKkar1FJWTOFdzmSN2YTHF8fCTUuBVLdtj3CQ7/tmGOubPWNnNVnPbeR1ZDQAFVZIcg4GS1jFjFHmEzixjCSX6KP13UU9s2n3W6QzejLYURLD33y3qoROkjMIhqltGoSev3bh/a407TopuiV5d7AhGAcd5JB33zzl6WMxgNeyLlwNrM3RtUnendmon5ondj/RZIPU0y/BTfwdb/47RJ6eCTRcYN5N2VufH0SclXcUUw6z0QV60VrlDinHgflxDomHemks5EoZwRN9aVY68e/5plKZZiQOLd64/+YGkTFFKJpj+/gQ8=
 
 language: java
 
@@ -8,5 +9,13 @@ sudo: false
 jdk:
   - oraclejdk8
 
+before_install:
+  - curl -sL https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar >jpm4j.jar
+  - java -jar jpm4j.jar -u init
+  - ~/jpm/bin/jpm install com.codacy:codacy-coverage-reporter:assembly
+
 script:
   - ./gradlew check jacocoTestReport coveralls
+
+after_success:
+  - ~/jpm/bin/codacy-coverage-reporter -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
