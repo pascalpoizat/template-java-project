@@ -5,9 +5,10 @@
 [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.1.0.0-blue.svg?label=version&style=flat-square)](build.gradle)<br/>
 [![Codacy Project Certification](https://img.shields.io/codacy/grade/50068fe969da4f8da9895ed9bd9e7897.svg?style=flat-square)](https://www.codacy.com/app/pascalpoizat/template-java-project/dashboard)
-<!--[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg?style=flat-square)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)-->
 [![Issues Ready](https://img.shields.io/github/issues-raw/pascalpoizat/template-java-project/ready.svg?style=flat-square&label=issues%20ready%20for%20development)](https://waffle.io/pascalpoizat/template-java-project)
 [![Issues in Progress](https://img.shields.io/github/issues-raw/pascalpoizat/template-java-project/in%20progress.svg?style=flat-square&label=issues%20in%20progress)](https://waffle.io/pascalpoizat/template-java-project)
+
+<!--[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg?style=flat-square)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)-->
 
 Template for an Open Source Java project
 
