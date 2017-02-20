@@ -5,7 +5,9 @@
 [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.1.0.0-blue.svg?label=version&style=flat-square)](build.gradle)<br/>
 [![Codacy Project Certification](https://img.shields.io/codacy/grade/50068fe969da4f8da9895ed9bd9e7897.svg?style=flat-square)](https://www.codacy.com/app/pascalpoizat/template-java-project/dashboard)
-[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg?style=flat-square)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)
+<!--[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg?style=flat-square)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)-->
+[![Issues Ready](https://img.shields.io/github/issues-raw/pascalpoizat/template-java-project/ready.svg?style=flat-square&label=issues%20ready%20for%20development)](https://waffle.io/pascalpoizat/template-java-project)
+[![Issues in Progress](https://img.shields.io/github/issues-raw/pascalpoizat/template-java-project/in%20progress.svg?style=flat-square&label=issues%20in%20progress)](https://waffle.io/pascalpoizat/template-java-project)
 
 Template for an Open Source Java project
 
@@ -26,21 +28,28 @@ All the following dependencies are free provided your project is Open Source.
     See [here](https://docs.travis-ci.com/user/for-beginners) how to activate this for your project.
     Then, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
     
-- Issues (using [Waffle](https://waffle.io) soon ...)
+- Issues
+ 
+    We use Github to manage issues. Further, we integrate with [Waffle](https://waffle.io) to show issues that are ready and ones that are in progress.
+    See [here](https://guides.github.com/features/issues/) for a documentation on Github issues, and
+    [here](https://github.com/integrations/waffle) on how to integrate Waffle to your project.
 
 - Code Analysis
 
-	We use [Codacy](https://www.codacy.com) for code analysis. See [here](https://github.com/integrations/codacy) how to activate this for your project.
+	We use [Codacy](https://www.codacy.com) for code analysis.
+	See [here](https://github.com/integrations/codacy) how to activate this for your project.
 	
-    We also use [SonarQube](http://www.sonarqube.org/) for code analysis.
-    **This is not included in the works made by Travis CI.**
-    Therefore you have to run Gradle target ```sonarqube```.
+    You may also use [SonarQube](http://www.sonarqube.org/) for code analysis.
+    **This is not included in the works made by Travis CI**.
+    However, Gradle is configured for using it.
+    You only have to run Gradle target ```sonarqube```.
     By default the ```build.gradle``` file works with a local SonarCube server on ```localhost:9000```.
     You will have to install and run your own server there or
     if you have access to another one to complete the information in ```build.gradle```.
     More information is [here](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner+for+Gradle)
     (note that Gradle includes a SonarCube plugin but it will be removed in Gradle 3.0).
-    The technical badge is not generated automatically. You will have to change the value by hand each time you run SonarCube (this is too bad).
+    The technical badge, that is commented out in this README file, is not generated automatically.
+    You will have to change the value by hand each time you run SonarCube (this is too bad).
 
 - Test Coverage
 
