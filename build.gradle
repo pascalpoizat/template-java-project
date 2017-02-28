@@ -3,7 +3,7 @@ version '0.1'
 
 buildscript {
     dependencies {
-        classpath 'org.ajoberstar:gradle-jacoco:0.1.0'
+        classpath 'org.jacoco:jacoco-maven-plugin:0.7.9'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
         classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
     }
