@@ -22,6 +22,21 @@ All the following dependencies are free provided your project is Open Source.
     Of course you can use another VCS here.
     What is nice with GitHub is the integration with Travis CI (see below).
     So here you only have to create a repository.
+    
+    Structured commit messages help in understanding changes, and perform automated tasks such as generating changelogs.
+    We propose to follow the [Angular JS commit guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit)
+    (see also the [variation given here](https://karma-runner.github.io/1.0/dev/git-commit-msg.html)). 
+
+    In order to follow easily these guidelines (conventional format) you may:
+    
+    - install and use the [commitizen command line utility](http://commitizen.github.io/cz-cli/),
+      *i.e.*, use `git cz` instead of `git commit -m "..."`. The adapter we use is `cz-conventional-changelog`.
+      
+    - install and use the [clog command line utility](https://github.com/clog-tool/clog-cli) to generate change logs
+       from commit messages that respect the conventional format.
+       
+    If you use to work with several projects at the same time, 
+    you may consider using the [uncommitted](https://pypi.python.org/pypi/uncommitted) command.
 
 - Continuous Integration
 
