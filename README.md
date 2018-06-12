@@ -51,11 +51,18 @@ All the following dependencies are free provided your project is Open Source.
     
     We use the scheme proposed by [Mediocre Laboratories](https://mediocre.com/forum/topics/how-we-use-labels-on-github-issues-at-mediocre-laboratories) for labels:
     
-    - priority: high (<span style="background-color:#b60205;color:white;">#b60205</span>), medium (<span style="background-color:#fbca04;color:white;">#fbca04</span>), low (<span style="background-color:#0e8a16;color:white;">#0e8a16</span>), prefixed by "priority:"
+    - priority:
+      (#b60205),
+      (#fbca04),
+      <a class="d-inline-block IssueLabel v-align-text-top labelstyle-0e8a16 linked-labelstyle-0e8a16" style="background-color: #0e8a16; color: #ffffff" title="priority: low" href="/pascalpoizat/template-java-project/issues?q=is%3Aissue+is%3Aopen+label%3A%22priority%3A+low%22">priority: low</a> (#0e8a16)
     	
-    - type: bug (<span style="background-color:#e99695;color: black;">#e99695</span>), technical debt (<span style="background-color:#fef2c0;color:black;">#fef2c0 </span>), features (<span style="background-color:#c2e0c6;color:black;">#c2e0c6 </span>), prefixed by "type:"
+    - type:
+      (#e99695),
+      (#fef2c0),
+      <a class="d-inline-block IssueLabel v-align-text-top labelstyle-c2e0c6 linked-labelstyle-c2e0c6" style="background-color: #c2e0c6; color: #000000" title="type: feature" href="/pascalpoizat/template-java-project/issues?q=is%3Aissue+is%3Aopen+label%3A%22type%3A+feature%22">type: feature</a> (#c2e0c6)
     	
-    - other labels, including "duplicate", "wontfix", "invalid", "ready", and "in progress", start by ~ (<span style="background-color:#ededed;color:black;">#ededed</span>)
+    - other labels, including "duplicate", "wontfix", "invalid", "ready", and "in progress", start by ~, e.g,
+      (>#ededed)
     
     To follow your issues (and the work on them) you can use one of:
     
