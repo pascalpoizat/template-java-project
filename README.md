@@ -46,9 +46,22 @@ All the following dependencies are free provided your project is Open Source.
     
 - Issues
  
-    We use Github to manage issues. Further, we integrate with [Waffle](https://waffle.io) to show issues that are ready and ones that are in progress.
-    See [here](https://guides.github.com/features/issues/) for a documentation on Github issues, and
-    [here](https://github.com/integrations/waffle) on how to integrate Waffle to your project.
+    We use Github to manage issues.
+    See [here](https://guides.github.com/features/issues/) for a documentation on Github issues.
+    
+    We use the scheme proposed by [Mediocre Laboratories](https://mediocre.com/forum/topics/how-we-use-labels-on-github-issues-at-mediocre-laboratories) for labels:
+    
+    - priority: high (<span style="background-color:#b60205;color:white;">#b60205</span>), medium (<span style="background-color:#fbca04;color:white;">#fbca04</span>), low (<span style="background-color:#0e8a16;color:white;">#0e8a16</span>), prefixed by "priority:"
+    	
+    - type: bug (<span style="background-color:#e99695;color: black;">#e99695</span>), technical debt (<span style="background-color:#fef2c0;color:black;">#fef2c0 </span>), features (<span style="background-color:#c2e0c6;color:black;">#c2e0c6 </span>), prefixed by "type:"
+    	
+    - other labels, including "duplicate", "wontfix", "invalid", "ready", and "in progress", start by ~ (<span style="background-color:#ededed;color:black;">#ededed</span>)
+    
+    To follow your issues (and the work on them) you can use one of:
+    
+    - [Github Project Boards](https://help.github.com/articles/managing-project-boards-in-your-repository-or-organization/)
+    - [Trello](https://trello.com), and see [here](https://blog.trello.com/github-and-trello-integrate-your-commits) for the integration between Trello and GitHub
+    - [Waffle](https://waffle.io), and see [here](https://github.com/integrations/waffle) on how to integrate Waffle to your project.
 
 - Code Analysis
 
