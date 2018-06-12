@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/pascalpoizat/template-java-project/master.svg?style=flat-square)](https://travis-ci.org/pascalpoizat/template-java-project)
 [![Code Coverage](https://img.shields.io/coveralls/pascalpoizat/template-java-project/master.svg?style=flat-square)](https://coveralls.io/github/pascalpoizat/template-java-project)
 [![License](https://img.shields.io/github/license/pascalpoizat/template-java-project.svg?style=flat-square)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.0.0-blue.svg?label=version&style=flat-square)](build.gradle)<br/>
+[![Version](https://img.shields.io/github/tag/pascalpoizat/template-java-project.svg?label=version&style=flat-square)](build.gradle)<br/>
 [![Codacy Project Certification](https://img.shields.io/codacy/grade/428275ad0c0447a0887feb820e848e19.svg?style=flat-square)](https://www.codacy.com/app/pascalpoizat/template-java-project/dashboard)
 [![Issues Ready](https://img.shields.io/github/issues-raw/pascalpoizat/template-java-project/ready.svg?style=flat-square&label=issues%20ready%20for%20development)](https://waffle.io/pascalpoizat/template-java-project)
 [![Issues in Progress](https://img.shields.io/github/issues-raw/pascalpoizat/template-java-project/in%20progress.svg?style=flat-square&label=issues%20in%20progress)](https://waffle.io/pascalpoizat/template-java-project)
@@ -94,7 +94,32 @@ All the following dependencies are free provided your project is Open Source.
 - License Badges
 
     We use [shields.io](https://img.shields.io) to generate the license badge automatically from the LICENSE file in the github repository.
-    
+
+- Tags and Releases
+
+    see [Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) and
+    [GitHub Help - Releases](https://help.github.com/categories/releases/).
+
+    We use [shields.io](https://img.shields.io) to generate tag and release badges automatically. **Note:** this seems to fail for releases for some reason. If tags and releases correspond, you can use the last tag badge and use the label parameter to change the badge label.
+
+    - last tag: ![TAG](https://img.shields.io/github/tag/pascalpoizat/template-java-project.svg?style=flat-square)
+
+	    <pre>
+	    https://img.shields.io/github/tag/pascalpoizat/template-java-project.svg?style=flat-square
+	    </pre>
+
+    - last release: ![Release](https://img.shields.io/github/release/pascalpoizat/template-java-project.svg?style=flat-square)
+
+	    <pre>
+	    https://img.shields.io/github/release/pascalpoizat/template-java-project.svg?style=flat-square
+	    </pre>
+
+    - last release (including a pre-release): ![(Pre-)Release](https://img.shields.io/github/release/pascalpoizat/template-java-project/all.svg?style=flat-square)
+
+	    <pre>
+	    https://img.shields.io/github/release/pascalpoizat/template-java-project/all.svg?style=flat-square
+	    </pre>
+
 - Documentation (soon ...)
 
 - Web Site (soon ...)
