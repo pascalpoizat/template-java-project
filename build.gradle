@@ -79,6 +79,7 @@ task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
     main = "com.codacy.CodacyCoverageReporter"
     classpath = configurations.codacy
     args = [
+            "report",
             "-l",
             "Java",
             "-r",
