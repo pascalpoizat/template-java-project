@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/pascalpoizat/template-java-project/master.svg?style=flat-square)](https://travis-ci.org/pascalpoizat/template-java-project)
 [![Code Coverage](https://img.shields.io/coveralls/pascalpoizat/template-java-project/master.svg?style=flat-square)](https://coveralls.io/github/pascalpoizat/template-java-project)
-[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/github/license/pascalpoizat/template-java-project.svg?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.1.0.0-blue.svg?label=version&style=flat-square)](build.gradle)<br/>
 [![Codacy Project Certification](https://img.shields.io/codacy/grade/428275ad0c0447a0887feb820e848e19.svg?style=flat-square)](https://www.codacy.com/app/pascalpoizat/template-java-project/dashboard)
 [![Issues Ready](https://img.shields.io/github/issues-raw/pascalpoizat/template-java-project/ready.svg?style=flat-square&label=issues%20ready%20for%20development)](https://waffle.io/pascalpoizat/template-java-project)
@@ -53,7 +53,7 @@ All the following dependencies are free provided your project is Open Source.
 - Code Analysis
 
 	We use [Codacy](https://www.codacy.com) for code analysis.
-	See [here](https://github.com/integrations/codacy) how to activate this for your project.
+	See [here](https://support.codacy.com/hc/en-us/sections/201760869-Integrations) how to activate this for your project.
 	
     You may also use [SonarQube](http://www.sonarqube.org/) for code analysis.
     **This is not included in the works made by Travis CI**.
@@ -91,9 +91,9 @@ All the following dependencies are free provided your project is Open Source.
     Of course different logging APIs can be used instead of Log4j.
     For example if you use ``java.util.logging`` you can remove the Log4j and jackson-dataformat dependencies from ```build.gradle```, and you don't need the Log4j configuration files.
 
-- Licence Badges
+- License Badges
 
-    We use [shields.io](https://img.shields.io) to generate the badges.
+    We use [shields.io](https://img.shields.io) to generate the license badge automatically from the LICENSE file in the github repository.
     
 - Documentation (soon ...)
 
