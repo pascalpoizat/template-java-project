@@ -51,18 +51,16 @@ All the following dependencies are free provided your project is Open Source.
     
     We use the scheme proposed by [Mediocre Laboratories](https://mediocre.com/forum/topics/how-we-use-labels-on-github-issues-at-mediocre-laboratories) for labels:
     
-    - priority:
-      (#b60205),
-      (#fbca04),
-      <a class="d-inline-block IssueLabel v-align-text-top labelstyle-0e8a16 linked-labelstyle-0e8a16" style="background-color: #0e8a16; color: #ffffff" title="priority: low" href="/pascalpoizat/template-java-project/issues?q=is%3Aissue+is%3Aopen+label%3A%22priority%3A+low%22">priority: low</a> (#0e8a16)
+    - priority: high (#b60205),
+      priority: medium (#fbca04),
+      priority: low (#0e8a16)
     	
-    - type:
-      (#e99695),
-      (#fef2c0),
-      <a class="d-inline-block IssueLabel v-align-text-top labelstyle-c2e0c6 linked-labelstyle-c2e0c6" style="background-color: #c2e0c6; color: #000000" title="type: feature" href="/pascalpoizat/template-java-project/issues?q=is%3Aissue+is%3Aopen+label%3A%22type%3A+feature%22">type: feature</a> (#c2e0c6)
+    - type: bug (#e99695),
+      type: technical debt (#fef2c0),
+      type: feature (#c2e0c6)
     	
     - other labels, including "duplicate", "wontfix", "invalid", "ready", and "in progress", start by ~, e.g,
-      (>#ededed)
+      ~ready (#ededed)
     
     To follow your issues (and the work on them) you can use one of:
     
