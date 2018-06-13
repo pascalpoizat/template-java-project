@@ -93,8 +93,11 @@ All the following dependencies are free provided your project is Open Source.
     (e.g., in order to have a good SonarQube technical debt).
     To have JaCoCo support, nothing to do, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
 
-    We use [Coveralls](https://coveralls.io/) to produce test coverage history and statistics.
-    See [here](https://coveralls.zendesk.com/hc/en-us) how to activate this for your project.
+    We use [Coveralls](https://coveralls.io/) and [Codecov](https://codecov.io/) to produce test coverage history and statistics.
+    See respectively
+    [here](https://coveralls.zendesk.com/hc/en-us), and
+    [here](https://github.com/codecov/example-gradle)
+    how to activate this for your project.
     Then, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
     
     Coverage information can be sent to Codacy (soon ...)

@@ -15,7 +15,10 @@ before_install:
 #  - ~/jpm/bin/jpm install com.codacy:codacy-coverage-reporter:assembly
 
 script:
-  - ./gradlew check jacocoTestReport coveralls sendCoverageToCodacy
+  - ./gradlew check jacocoTestReport
+  - coveralls
+  - sendCoverageToCodacy
+  - bash <(curl -s https://codecov.io/bash)
 
 after_success:
 # does not seem to work anymore on April, 3rd, 2017 (JPM down?)
