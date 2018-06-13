@@ -61,6 +61,8 @@ All the following dependencies are free provided your project is Open Source.
     	
     - other labels, including "duplicate", "wontfix", "invalid", "ready", and "in progress", start by ~, e.g,
       ~ready (#ededed)
+
+    See [here](https://github.com/pascalpoizat/template-java-project/labels) for the list of labels.
     
     To follow your issues (and the work on them) you can use one of:
     
