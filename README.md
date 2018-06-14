@@ -6,8 +6,7 @@
 [![License](https://img.shields.io/github/license/pascalpoizat/template-java-project.svg?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/github/tag/pascalpoizat/template-java-project.svg?label=version&style=flat-square)](build.gradle)<br/>
 [![Codacy Project Certification](https://img.shields.io/codacy/grade/428275ad0c0447a0887feb820e848e19.svg?style=flat-square)](https://www.codacy.com/app/pascalpoizat/template-java-project/dashboard)
-[![Issues Ready](https://img.shields.io/github/issues-raw/pascalpoizat/template-java-project/ready.svg?style=flat-square&label=issues%20ready%20for%20development)](https://waffle.io/pascalpoizat/template-java-project)
-[![Issues in Progress](https://img.shields.io/github/issues-raw/pascalpoizat/template-java-project/in%20progress.svg?style=flat-square&label=issues%20in%20progress)](https://waffle.io/pascalpoizat/template-java-project)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/pascalpoizat/template-java-project.svg?columns=all)](https://waffle.io/pascalpoizat/template-java-project)
 
 <!--[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg?style=flat-square)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)-->
 
