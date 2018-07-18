@@ -1,6 +1,3 @@
-group 'fr.uparis10.pascalpoizat'
-version '0.1'
-
 buildscript {
     dependencies {
         classpath 'org.jacoco:jacoco-maven-plugin:0.7.9'
@@ -17,10 +14,17 @@ buildscript {
     }
 }
 
+//plugins {
+//    id "org.sonarqube" version "2.6"
+//}
+
 apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'org.sonarqube'
 apply plugin: 'com.github.kt3k.coveralls'
+
+group 'fr.uparis10.pascalpoizat'
+version '0.1'
 
 dependencies {
     testCompile "org.testng:testng:6.9.10"

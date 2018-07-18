@@ -6,6 +6,10 @@
 [![License](https://img.shields.io/github/license/pascalpoizat/template-java-project.svg?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/github/tag/pascalpoizat/template-java-project.svg?label=version&style=flat-square)](build.gradle)<br/>
 [![Codacy Project Certification](https://img.shields.io/codacy/grade/428275ad0c0447a0887feb820e848e19.svg?style=flat-square)](https://www.codacy.com/app/pascalpoizat/template-java-project/dashboard)
+[![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
+[![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=coverage)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
+[![SonarCloud Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=sqale_index)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
+<br/>
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/pascalpoizat/template-java-project.svg?columns=all)](https://waffle.io/pascalpoizat/template-java-project)
 
 <!--[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg?style=flat-square)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)-->
@@ -76,16 +80,7 @@ All the following dependencies are free provided your project is Open Source.
 	See [here](https://support.codacy.com/hc/en-us/sections/201760869-Integrations) how to activate this for your project.
 	
     You may also use [SonarQube](http://www.sonarqube.org/) for code analysis.
-    **This is not included in the works made by Travis CI**.
-    However, Gradle is configured for using it.
-    You only have to run Gradle target ```sonarqube```.
-    By default the ```build.gradle``` file works with a local SonarCube server on ```localhost:9000```.
-    You will have to install and run your own server there or
-    if you have access to another one to complete the information in ```build.gradle```.
-    More information is [here](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner+for+Gradle)
-    (note that Gradle includes a SonarCube plugin but it will be removed in Gradle 3.0).
-    The technical badge, that is commented out in this README file, is not generated automatically.
-    You will have to change the value by hand each time you run SonarCube (this is too bad).
+    For this we use [sonarcloud.io](https://sonarcloud.io). See information [here](https://docs.travis-ci.com/user/sonarcloud/) on how to setup Travis CI to work with SonarCloud.
 
 - Test Coverage
 
