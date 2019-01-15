@@ -1,6 +1,6 @@
 buildscript {
     dependencies {
-        classpath 'org.jacoco:jacoco-maven-plugin:0.7.9'
+        classpath 'org.jacoco:jacoco-maven-plugin:0.8.2'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
         classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
     }
