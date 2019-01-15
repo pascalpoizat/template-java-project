@@ -65,7 +65,7 @@ sonarqube {
     properties {
         //property "sonar.projectName", "PROJECT NAME"
         //property "sonar.projectKey", "PROJECT KEY"
-        property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+        property "sonar.jacoco.reportPaths", "${project.buildDir}/jacoco/test.exec"
     }
 }
 
