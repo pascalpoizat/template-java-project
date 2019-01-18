@@ -57,12 +57,14 @@ test {
 
 jacoco {
   toolVersion = '0.8.2'
+  reportsDir = file("${buildDir}/reports/jacoco") // this is the default
 }
 
 jacocoTestReport {
     reports {
         xml.enabled = true // coveralls plugin depends on xml format report
         html.enabled = true
+        html.destination = file("${buildDir}/jacocoHtml")
     }
 }
 
@@ -70,7 +72,7 @@ sonarqube {
     properties {
         //property "sonar.projectName", "PROJECT NAME"
         //property "sonar.projectKey", "PROJECT KEY"
-        property "sonar.jacoco.reportPaths", "${project.buildDir}/jacoco/test.exec"
+        property "sonar.jacoco.reportPaths", "${buildDir}/jacoco/test.exec"
     }
 }
 

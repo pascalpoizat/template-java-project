@@ -23,7 +23,8 @@ before_install:
 script:
   - ./gradlew check jacocoTestReport coveralls sendCoverageToCodacy
   - bash <(curl -s https://codecov.io/bash)
-  - sonar-scanner
+#  - sonar-scanner
+  - ./gradlew sonarqube
 
 after_success:
 # does not seem to work anymore on April, 3rd, 2017 (JPM down?)
