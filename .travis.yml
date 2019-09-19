@@ -11,8 +11,8 @@ addons:
 
 sudo: false
 
-jdk:
-  - oraclejdk8
+#jdk:
+#  - oraclejdk8
 
 before_install:
 # does not seem to work anymore on April, 3rd, 2017 (JPM down?)
