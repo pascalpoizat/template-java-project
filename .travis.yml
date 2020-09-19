@@ -25,6 +25,7 @@ script:
   - bash <(curl -s https://codecov.io/bash)
 #  - sonar-scanner
   - ./gradlew sonarqube
+  - ./gradlew :plantUml
 
 after_success:
 # does not seem to work anymore on April, 3rd, 2017 (JPM down?)
