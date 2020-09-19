@@ -2,6 +2,8 @@ package fr.paris10.pascalpoizat.templates.javaproject;
 
 import org.testng.annotations.Test;
 
+import fr.parisnanterre.pascalpoizat.templates.javaproject.Principal;
+
 /**
  * template-java-project
  * Copyright 2015 pascalpoizat

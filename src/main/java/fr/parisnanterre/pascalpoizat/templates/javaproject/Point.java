@@ -1,7 +1,4 @@
-package fr.paris10.pascalpoizat.templates.javaproject;
-
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+package fr.parisnanterre.pascalpoizat.templates.javaproject;
 
 /**
  * template-java-project
@@ -20,20 +17,26 @@ import org.apache.logging.log4j.LogManager;
  * limitations under the License.
  */
 
-public class Principal {
+public class Point {
 
-    private static final Logger LOGGER = LogManager.getLogger(Principal.class.getName());
+    private int x;
+    private int y;
 
-    private Principal() {
-
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public static void main(String[] args) {
-        LOGGER.trace("begin of program"); // only for test
-        Point p = new Point(3, 4);
-        LOGGER.info(p.toString()); // a message for the user
-        LOGGER.warn("a fake warning");
-        LOGGER.error("a fake error");
-        LOGGER.trace("end of program"); // only for test
+    public int getX() {return x;}
+
+    public void setX(int x) {this.x = x;}
+
+    public int getY() {return y;}
+
+    public void setY(int y) {this.y = y;}
+
+    @Override
+    public String toString() {
+        return String.format("(%d, %d)", getX(), getY());
     }
 }

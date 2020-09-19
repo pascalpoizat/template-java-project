@@ -5,6 +5,13 @@ buildscript {
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
         // classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
         classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7'
+        classpath "com.cosminpolifronie.gradle:gradle-plantuml-plugin:1.6.0"
+
+        //
+        // TEST
+        //
+        // classpath "org.fmiw:plantuml-gradle-plugin:0.1"
+        // classpath "com.github.roroche:plantuml-gradle-plugin:1.0.2"
     }
     repositories {
         mavenCentral()
@@ -24,8 +31,15 @@ apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'org.sonarqube'
 apply plugin: 'com.github.kt3k.coveralls'
+apply plugin: "com.cosminpolifronie.gradle.plantuml"
 
-group 'fr.uparis10.pascalpoizat'
+//
+// TEST
+//
+// apply plugin: "com.github.roroche.plantuml"
+// apply plugin: "org.fmiw.plantuml"
+
+group 'fr.parisnanterre.pascalpoizat'
 version '0.1'
 
 dependencies {
@@ -41,7 +55,7 @@ repositories {
     // mavenLocal()
 }
 
-mainClassName = 'fr.paris10.pascalpoizat.templates.javaproject.Principal'
+mainClassName = 'fr.parisnanterre.pascalpoizat.templates.javaproject.Principal'
 
 defaultTasks 'run'
 
@@ -98,3 +112,33 @@ task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
             "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
     ]
 }
+
+plantUml {
+    render input: 'model.puml', output: 'build/model.svg', format: 'svg', withMetadata: false
+}
+
+//
+// TEST
+//
+
+// generate plantuml model from code
+// classDiagram {
+//     packageName = "fr.parisnanterre.pascalpoizat.templates.javaproject"
+//     outputFile = project.file('build/model_generated.puml')
+//     // outputFile = new File("${projectDir}/diagrams/class_diagram.plantuml")
+//     ignoredClasses = [
+//     ]
+// }
+
+// generate image from plantuml model
+// plantuml {
+//   options {
+//     outputDir = project.file('build')
+//   }
+  
+//   diagrams {
+//     model {
+//       sourceFile = project.file('model.puml')
+//     }
+//   }
+// }

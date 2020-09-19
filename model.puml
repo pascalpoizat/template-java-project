@@ -1,0 +1,34 @@
+@startuml model
+
+package org.apache.logging.log4j {
+
+    class Logger
+    
+    class LogManager
+
+}
+
+package fr.paris10.pascapoizat.templates.javaproject {
+
+    class Point {
+        - x : integer
+        - y : integer
+        + Point(x : integer, y : integer)
+        + getX() : integer
+        + getY() : integer
+        + setX(x : integer)
+        + setY(y : integer)
+        + toString() : string
+    }
+
+    class Principal {
+        + {static} main(args: String[])
+    }
+
+    Principal --> Point
+    Principal --> Logger
+    Principal --> LogManager
+
+}
+
+@enduml

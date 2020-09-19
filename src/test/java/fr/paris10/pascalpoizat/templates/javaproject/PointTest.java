@@ -2,6 +2,8 @@ package fr.paris10.pascalpoizat.templates.javaproject;
 
 import static org.testng.Assert.*;
 
+import fr.parisnanterre.pascalpoizat.templates.javaproject.Point;
+
 /**
  * template-java-project
  * Copyright 2015 pascalpoizat
