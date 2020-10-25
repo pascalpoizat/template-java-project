@@ -1,0 +1,76 @@
+= ```template-java-project``` Documentation
+Pascal Poizat @pascalpoizat
+2020-10-25
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../../main/java]
+ifndef::modelsdir[:modelsdir: models]
+
+// :reproducible:
+// :numbered:
+// :xrefstyle: short
+// :figure-caption: Figure
+// :listing-caption: Listing
+
+== How to install?
+
+=== Note
+
+Tested with gradle 6.6.1 and Java 12.0.2 (does not work with Java 14)
+
+=== If you have ```git``` on your computer
+
+Simply run:
+[source,shell]
+----
+git clone https://github.com/pascalpoizat/template-java-project
+----
+
+=== If you do not have ```git``` on your computer
+
+Go to https://github.com/pascalpoizat/template-java-project, get the zipfile and uncompress it.
+
+== How to run?
+
+Simply run:
+[source, shell]
+----
+./gradlew run
+----
+
+== What does ```template-java-project``` do?
+
+Well, not much (see below).
+
+Here is the class diagram:
+
+[plantuml, "class-diagram", svg, config="commons.style"]
+.App class diagram
+----
+include::{modelsdir}/model.puml
+----
+
+Here is a part of the source code (using ```include``` but you can also put it directly):
+
+[source,java]
+.App source code
+----
+include::{sourcedir}/fr/parisnanterre/pascalpoizat/templates/javaproject/Point.java[indent=0]
+----
+
+Here is some code selection (the ```main``` method, using ```tag```):
+
+[source,java]
+----
+include::{sourcedir}/fr/parisnanterre/pascalpoizat/templates/javaproject/Principal.java[tag=fordoc1,indent=0]
+----
+
+== Last comments
+
+Let us end with a recommended book, <<ej3>>.
+
+[bibliography]
+== References
+
+- [[[ej3,1]]] Joshua Bloch. Effective Java, Third Edition. Pearson Education. 2018.
