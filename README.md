@@ -12,8 +12,10 @@
 [![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
 [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=coverage)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
 [![SonarCloud Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=sqale_index)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
+<!--
 <br/>
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/pascalpoizat/template-java-project.svg?columns=all)](https://waffle.io/pascalpoizat/template-java-project)
+-->
 
 <!--[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg?style=flat-square)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)-->
 
@@ -75,9 +77,10 @@ All the following dependencies are free provided your project is Open Source.
     
     To follow your issues (and the work on them) you can use one of:
     
-    - [Github Project Boards](https://help.github.com/articles/managing-project-boards-in-your-repository-or-organization/)
+    - [Github Project Boards](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/about-project-boards)
+    - [GitKraken Boards](https://www.gitkraken.com/boards) and see [here](https://github.com/marketplace/gitkraken-glo-boards) for the integration between GitKraken Boards and GitHub
     - [Trello](https://trello.com), and see [here](https://blog.trello.com/github-and-trello-integrate-your-commits) for the integration between Trello and GitHub
-    - [Waffle](https://waffle.io), and see [here](https://github.com/integrations/waffle) on how to integrate Waffle to your project.
+    - unfortunately, [Waffle](https://waffle.io) is now out of the game
 
 - Code Analysis
 
