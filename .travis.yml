@@ -25,11 +25,27 @@ script:
   - bash <(curl -s https://codecov.io/bash)
 #  - sonar-scanner
   - ./gradlew sonarqube
-#  - ./gradlew :plantUml
 
 after_success:
+  - ./gradlew jar # generate jar file
+  - ./gradlew asciidoctor # generate documentation
+#  - ./gradlew :plantUml
 # does not seem to work anymore on April, 3rd, 2017 (JPM down?)
 #  - ~/jpm/bin/codacy-coverage-reporter -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
+
+before_deploy:
+  - export VERSION=`./gradlew -q version`
+  - export BINDIR="build/libs"
+  - export BINFILE="template-java-project-${VERSION}"
+  - export DOCDIR="build/docs/asciidoctorPdf"
+  - export DOCFILE="main"
+  - mv "${DOCDIR}/${DOCFILE}.pdf" "${DOCDIR}/${DOCFILE}-${VERSION}.pdf"
+  - export BINARY="${BINDIR}/${BINFILE}.jar"
+  - export DOCUMENTATION="${DOCDIR}/${DOCFILE}-${VERSION}.pdf"
+
+deploy:
+  - echo ${BINARY}
+  - echo ${DOCUMENTATION}
 
 cache:
   directories:

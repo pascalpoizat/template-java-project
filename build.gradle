@@ -30,6 +30,7 @@ apply plugin: 'jacoco'
 apply plugin: 'org.sonarqube'
 apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: "com.cosminpolifronie.gradle.plantuml"
+apply plugin: VersionPlugin
 
 //
 // TEST
@@ -38,6 +39,19 @@ apply plugin: "com.cosminpolifronie.gradle.plantuml"
 
 group 'fr.parisnanterre.pascalpoizat'
 version '1.1'
+
+// plugin to get the version of the project
+// from https://stackoverflow.com/questions/13198358/how-to-get-project-version-in-custom-gradle-plugin
+// uses version in build.gradle file
+class VersionPlugin implements Plugin<Project> {
+    public void apply(Project project) {
+        project.task('version') {
+            project.gradle.projectsEvaluated {
+                println "$project.version"
+            }
+        }
+    }
+}
 
 dependencies {
     testCompile "org.testng:testng:7.3.0"
