@@ -28,6 +28,7 @@ script:
 
 after_success:
   - ./gradlew jar # generate jar file
+  - sudo apt install graphviz
   - ./gradlew asciidoctor # generate documentation
 #  - ./gradlew :plantUml
 # does not seem to work anymore on April, 3rd, 2017 (JPM down?)
@@ -42,10 +43,10 @@ before_deploy:
   - mv "${DOCDIR}/${DOCFILE}.pdf" "${DOCDIR}/${DOCFILE}-${VERSION}.pdf"
   - export BINARY="${BINDIR}/${BINFILE}.jar"
   - export DOCUMENTATION="${DOCDIR}/${DOCFILE}-${VERSION}.pdf"
-
-deploy:
   - echo ${BINARY}
   - echo ${DOCUMENTATION}
+
+deploy:
 
 cache:
   directories:
