@@ -2,7 +2,7 @@ package fr.parisnanterre.pascalpoizat.templates.javaproject;
 
 /**
  * template-java-project
- * Copyright 2015 pascalpoizat
+ * Copyright 2015-2020 pascalpoizat
  * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

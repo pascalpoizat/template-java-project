@@ -5,7 +5,7 @@ import org.apache.logging.log4j.LogManager;
 
 /**
  * template-java-project
- * Copyright 2015 pascalpoizat
+ * Copyright 2015-2020 pascalpoizat
  * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,6 +28,7 @@ public class Principal {
 
     }
 
+    // tag::fordoc1[]
     public static void main(String[] args) {
         LOGGER.trace("begin of program"); // only for test
         Point p = new Point(3, 4);
@@ -36,4 +37,5 @@ public class Principal {
         LOGGER.error("a fake error");
         LOGGER.trace("end of program"); // only for test
     }
+    // end::fordoc1[]
 }
