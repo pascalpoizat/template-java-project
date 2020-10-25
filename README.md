@@ -4,7 +4,10 @@
 [![Code Coverage with Coveralls](https://img.shields.io/coveralls/pascalpoizat/template-java-project/master.svg?label=coverage%20with%20coveralls&style=flat-square)](https://coveralls.io/github/pascalpoizat/template-java-project)
 [![Code Coverage with Codecov](https://img.shields.io/codecov/c/github/pascalpoizat/template-java-project/master.svg?label=coverage%20with%20codecov&style=flat-square)](https://codecov.io/gh/pascalpoizat/template-java-project)
 [![License](https://img.shields.io/github/license/pascalpoizat/template-java-project.svg?style=flat-square)](LICENSE)
-[![Version](https://img.shields.io/github/tag/pascalpoizat/template-java-project.svg?label=version&style=flat-square)](build.gradle)<br/>
+[![Tag](https://img.shields.io/github/tag/pascalpoizat/template-java-project.svg?label=tag&style=flat-square)](build.gradle)
+[![Release](https://img.shields.io/github/release/pascalpoizat/template-java-project.svg?style=flat-square)](build.gradle)
+[![(Pre-)Release](https://img.shields.io/github/release/pascalpoizat/template-java-project/all.svg?label=(pre-)release&style=flat-square)](build.gradle)
+<br/>
 [![Codacy Project Certification](https://img.shields.io/codacy/grade/428275ad0c0447a0887feb820e848e19.svg?style=flat-square)](https://www.codacy.com/app/pascalpoizat/template-java-project/dashboard)
 [![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
 [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=coverage)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
@@ -26,6 +29,8 @@ All the following dependencies are free provided your project is Open Source.
     Of course you can use another VCS here.
     What is nice with GitHub is the integration with Travis CI (see below).
     So here you only have to create a repository.
+
+    You must sign your work (commits and tags). See [here](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work).
     
     Structured commit messages help in understanding changes, and perform automated tasks such as generating changelogs.
     We propose to follow the [Angular JS commit guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit)
@@ -92,12 +97,12 @@ All the following dependencies are free provided your project is Open Source.
 
     We use [Coveralls](https://coveralls.io/) and [Codecov](https://codecov.io/) to produce test coverage history and statistics.
     See respectively
-    [here](https://coveralls.zendesk.com/hc/en-us), and
+    [dead link](https://coveralls.zendesk.com/hc/en-us), and
     [here](https://github.com/codecov/example-gradle)
     how to activate this for your project.
     Then, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
     
-    Coverage information can be sent to Codacy (soon ...)
+    Coverage information can be sent to Codacy (more information to come)
 
 - Logging
 
@@ -118,7 +123,7 @@ All the following dependencies are free provided your project is Open Source.
     see [Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) and
     [GitHub Help - Releases](https://help.github.com/categories/releases/).
 
-    We use [shields.io](https://img.shields.io) to generate tag and release badges automatically. **Note:** this seems to fail for releases for some reason. If tags and releases correspond, you can use the last tag badge and use the label parameter to change the badge label.
+    We use [shields.io](https://img.shields.io) to generate tag and release badges automatically.
 
     - last tag: ![TAG](https://img.shields.io/github/tag/pascalpoizat/template-java-project.svg?style=flat-square)
 
@@ -138,7 +143,9 @@ All the following dependencies are free provided your project is Open Source.
 	    https://img.shields.io/github/release/pascalpoizat/template-java-project/all.svg?style=flat-square
 	    </pre>
 
-- Documentation (soon ...)
+- Documentation
 
-- Web Site (soon ...)
+  We use [Asciidoctor](https://asciidoctor.org) and [PlantUML](https://plantuml.com). (more information to come)
+
+- Web Site (more information to come)
 
