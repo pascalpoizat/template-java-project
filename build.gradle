@@ -6,11 +6,6 @@ buildscript {
         // classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
         classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7'
         classpath "com.cosminpolifronie.gradle:gradle-plantuml-plugin:1.6.0"
-
-        //
-        // TEST
-        //
-        // classpath "org.fmiw:plantuml-gradle-plugin:0.1"
         // classpath "com.github.roroche:plantuml-gradle-plugin:1.0.2"
     }
     repositories {
@@ -23,9 +18,12 @@ buildscript {
     }
 }
 
-//plugins {
-//    id "org.sonarqube" version "2.6"
-//}
+plugins {
+    // id "org.sonarqube" version "2.6"
+    // id 'org.asciidoctor.jvm.convert' version '3.1.0'
+    id 'org.asciidoctor.jvm.pdf' version '3.1.0'
+    id 'org.asciidoctor.jvm.gems' version '3.1.0'
+}
 
 apply plugin: 'application'
 apply plugin: 'jacoco'
@@ -37,7 +35,6 @@ apply plugin: "com.cosminpolifronie.gradle.plantuml"
 // TEST
 //
 // apply plugin: "com.github.roroche.plantuml"
-// apply plugin: "org.fmiw.plantuml"
 
 group 'fr.parisnanterre.pascalpoizat'
 version '0.1'
@@ -47,9 +44,12 @@ dependencies {
     compile "org.apache.logging.log4j:log4j-api:2.5"
     compile "org.apache.logging.log4j:log4j-core:2.5"
     compile "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.5.0"
+    asciidoctorGems 'rubygems:rouge:3.15.0'
 }
 
 repositories {
+    jcenter()
+    ruby.gems()
     mavenCentral()
     // you can also use this for your local cache:
     // mavenLocal()
@@ -113,13 +113,56 @@ task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
     ]
 }
 
-plantUml {
-    render input: 'model.puml', output: 'build/model.svg', format: 'svg', withMetadata: false
+//
+// DOCUMENTATION (AsciiDoctor + PlantUML)
+//
+// see: 
+
+asciidoctorPdf {
+  dependsOn asciidoctorGemsPrepare
+
+  baseDirFollowsSourceFile()
+
+  asciidoctorj {
+    requires 'rouge'
+    modules {
+      diagram.use()
+    }
+    attributes 'build-gradle': file('build.gradle'),
+        'sourcedir': project.sourceSets.main.java.srcDirs[0],
+        'endpoint-url': 'http://example.org',
+        'source-highlighter': 'rouge',
+        'rouge-style': 'github',
+        'rouge-theme': 'github',
+        'imagesdir': './images',
+        'toc': 'left',
+        'toclevels': 2,
+        'icons': 'font',
+        'idprefix': '',
+        'idseparator': '-'
+  }
 }
 
+// pdfThemes {
+//     github 'basic', {
+//         organisation = 'fwilhe2'
+//         repository = 'corporate-theme'
+//         relativePath = 'resources/themes'
+//         branch = 'master'
+//         tag = '1.0.1'
+//         commit = '4910271e8c3964b60e186a62f3e4339ed0752714'
+//     }
+// }
+
+task asciidoctor(dependsOn: asciidoctorPdf)
+
 //
-// TEST
+// TESTS
 //
+
+// plantUml {
+//     render input: 'model.puml', output: 'build/model.svg', format: 'svg', withMetadata: false
+// }
 
 // generate plantuml model from code
 // classDiagram {
@@ -128,17 +171,4 @@ plantUml {
 //     // outputFile = new File("${projectDir}/diagrams/class_diagram.plantuml")
 //     ignoredClasses = [
 //     ]
-// }
-
-// generate image from plantuml model
-// plantuml {
-//   options {
-//     outputDir = project.file('build')
-//   }
-  
-//   diagrams {
-//     model {
-//       sourceFile = project.file('model.puml')
-//     }
-//   }
 // }

@@ -43,12 +43,51 @@ Simply run:
 
 Well, not much (see below).
 
-Here is the class diagram:
+Here is the class diagram.
 
-[plantuml, "class-diagram", svg, config="commons.style"]
+First and included version:
+
+plantuml::{modelsdir}/model.puml["class-diagram",svg,config="commons.style"]
+
+Then an inlined version:
+
+[plantuml,"class-diagram", svg, config="models/commons.style"]
 .App class diagram
 ----
-include::{modelsdir}/model.puml
+@startuml model
+
+package org.apache.logging.log4j {
+
+    class Logger
+    
+    class LogManager
+
+}
+
+package fr.paris10.pascapoizat.templates.javaproject {
+
+    class Point {
+        - x : integer
+        - y : integer
+        + Point(x : integer, y : integer)
+        + getX() : integer
+        + getY() : integer
+        + setX(x : integer)
+        + setY(y : integer)
+        + toString() : string
+    }
+
+    class Principal {
+        + {static} main(args: String[])
+    }
+
+    Principal --> Point
+    Principal --> Logger
+    Principal --> LogManager
+
+}
+
+@enduml
 ----
 
 Here is a part of the source code (using ```include``` but you can also put it directly):
