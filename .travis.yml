@@ -37,7 +37,7 @@ before_deploy:
   - export VERSION=`./gradlew -q version`
   - export BINDIR="build/libs"
   - export BINFILE="template-java-project-${VERSION}"
-  - export DOCDIR="build/docs/asciidoctorPdf"
+  - export DOCDIR="build/docs/asciidocPdf"
   - export DOCFILE="main"
   - mv "${DOCDIR}/${DOCFILE}.pdf" "${DOCDIR}/${DOCFILE}-${VERSION}.pdf"
   - export BINARY="${BINDIR}/${BINFILE}.jar"
