@@ -8,6 +8,8 @@
 [![Release](https://img.shields.io/github/release/pascalpoizat/template-java-project.svg?style=flat-square)](build.gradle)
 [![(Pre-)Release](https://img.shields.io/github/release/pascalpoizat/template-java-project/all.svg?label=(pre-)release&style=flat-square)](build.gradle)
 <br/>
+
+[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/pascalpoizat/template-java-project?style=flat-square)](https://codeclimate.com/github/pascalpoizat/template-java-project)
 [![Codacy Project Certification](https://img.shields.io/codacy/grade/428275ad0c0447a0887feb820e848e19.svg?style=flat-square)](https://www.codacy.com/app/pascalpoizat/template-java-project/dashboard)
 [![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
 [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=coverage)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
@@ -19,7 +21,9 @@
 
 <!--[![SonarQube Technical Debt](https://img.shields.io/badge/technical%20debt-0.0%-brightgreen.svg?style=flat-square)](http://localhost:9000/dashboard/index/fr.uparis10.pascalpoizat:template-java-project)-->
 
-Template for an Open Source Java project
+Template for an Open Source Java Project
+
+This is used as a set of information for students' projects.
 
 ## dependencies
 
@@ -27,9 +31,9 @@ All the following dependencies are free provided your project is Open Source.
 
 - Source repository and VCS
 
-    We use [GitHub](https://github.com/).
+    We will use [GitHub](https://github.com/).
     Of course you can use another VCS here.
-    What is nice with GitHub is the integration with Travis CI (see below).
+    What is nice with GitHub is the integration with CI, issue management, and project boards (see below).
     So here you only have to create a repository.
 
     You must sign your work (commits and tags). See [here](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work).
@@ -41,7 +45,7 @@ All the following dependencies are free provided your project is Open Source.
     In order to follow easily these guidelines (conventional format) you may:
     
     - install and use the [commitizen command line utility](http://commitizen.github.io/cz-cli/),
-      *i.e.*, use `git cz` instead of `git commit -m "..."`. The adapter we use is `cz-conventional-changelog`.
+      *e.g.*, use `git cz` instead of `git commit -m "..."` or use the plugin for your IDE (*e.g.*, see [here](https://github.com/KnisterPeter/vscode-commitizen)). The adapter we use is `cz-conventional-changelog`.
       
     - install and use the [clog command line utility](https://github.com/clog-tool/clog-cli) to generate change logs
        from commit messages that respect the conventional format.
@@ -51,16 +55,18 @@ All the following dependencies are free provided your project is Open Source.
 
 - Continuous Integration
 
-    We use [Travis CI](https://travis-ci.org/) and its connection to GitHub.
+    We will use [Travis CI](https://travis-ci.org/) and its connection to GitHub.
     See [here](https://docs.travis-ci.com/user/for-beginners) how to activate this for your project.
     Then, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
+
+    You can use other CI services that have equivalent features. We will add information about GitHub actions in a next version of this template.
     
 - Issues
  
-    We use Github to manage issues.
+    We will use Github to manage issues.
     See [here](https://guides.github.com/features/issues/) for a documentation on Github issues.
     
-    We use the scheme proposed by [Mediocre Laboratories](https://mediocre.com/forum/topics/how-we-use-labels-on-github-issues-at-mediocre-laboratories) for labels:
+    We will use the scheme proposed by [Mediocre Laboratories](https://mediocre.com/forum/topics/how-we-use-labels-on-github-issues-at-mediocre-laboratories) for labels:
     
     - priority: high (#b60205),
       priority: medium (#fbca04),
@@ -84,32 +90,34 @@ All the following dependencies are free provided your project is Open Source.
 
 - Code Analysis
 
-	We use [Codacy](https://www.codacy.com) for code analysis.
+	You can use [Codacy](https://www.codacy.com) for code analysis.
 	See [here](https://support.codacy.com/hc/en-us/sections/201760869-Integrations) how to activate this for your project.
 	
-    You may also use [SonarQube](http://www.sonarqube.org/) for code analysis.
-    For this we use [sonarcloud.io](https://sonarcloud.io). See information [here](https://docs.travis-ci.com/user/sonarcloud/) on how to setup Travis CI to work with SonarCloud.
+  Another solution is to use [Code Climate](https://codeclimate.com/dashboard). See [here](https://docs.codeclimate.com/docs/getting-started-with-code-climate) how to activate this for your project.
+
+  You may also use [SonarQube](http://www.sonarqube.org/) for code analysis.
+  For this we use [sonarcloud.io](https://sonarcloud.io). See information [here](https://docs.travis-ci.com/user/sonarcloud/) on how to setup Travis CI to work with SonarCloud.
 
 - Test Coverage
 
-    We use [JaCoCo](http://eclemma.org/jacoco/) to produce test coverage reports.
+    We will use [JaCoCo](http://eclemma.org/jacoco/) to produce test coverage reports.
     For the time being it does not support excluding private constructors from the analysis.
     Hence you won't get 100% coverage in the reports if you use them
-    (e.g., in order to have a good SonarQube technical debt).
+    (anyway, remember 100% coverage is not an objective in itself).
     To have JaCoCo support, nothing to do, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
 
-    We use [Coveralls](https://coveralls.io/) and [Codecov](https://codecov.io/) to produce test coverage history and statistics.
+    We will use [Coveralls](https://coveralls.io/) and [Codecov](https://codecov.io/) to produce test coverage history and statistics.
     See respectively
     [dead link](https://coveralls.zendesk.com/hc/en-us), and
     [here](https://github.com/codecov/example-gradle)
     how to activate this for your project.
     Then, the provided ```.travis.yml``` and ```build.gradle``` files will do the job.
     
-    Coverage information can be sent to Codacy (more information to come)
+    Coverage information can also be sent to Codacy (more information to come).
 
 - Logging
 
-    We use [Apache Log4j 2](http://logging.apache.org/log4j/2.x/) for logging.
+    We will use [Apache Log4j 2](http://logging.apache.org/log4j/2.x/) for logging.
     A very basic set configuration files, in YAML format, is provided.
     More information is [here](http://logging.apache.org/log4j/2.x/manual/configuration.html).
     Note the use of distinct configurations files for the run (```src/main/resources/log4j2.yml```) and for the test (```src/main/resources/log4j2-test.yml```).
@@ -119,14 +127,14 @@ All the following dependencies are free provided your project is Open Source.
 
 - License Badges
 
-    We use [shields.io](https://img.shields.io) to generate the license badge automatically from the LICENSE file in the github repository.
+    We will use [shields.io](https://img.shields.io) to generate the license badge automatically from the LICENSE file in the github repository.
 
 - Tags and Releases
 
     see [Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) and
     [GitHub Help - Releases](https://help.github.com/categories/releases/).
 
-    We use [shields.io](https://img.shields.io) to generate tag and release badges automatically.
+    We will use [shields.io](https://img.shields.io) to generate tag and release badges automatically.
 
     - last tag: ![TAG](https://img.shields.io/github/tag/pascalpoizat/template-java-project.svg?style=flat-square)
 
@@ -148,7 +156,7 @@ All the following dependencies are free provided your project is Open Source.
 
 - Documentation
 
-  We use [Asciidoctor](https://asciidoctor.org) and [PlantUML](https://plantuml.com). (more information to come)
+  We will use [Asciidoctor](https://asciidoctor.org) and [PlantUML](https://plantuml.com). (more information to come)
 
 - Web Site (more information to come)
 
