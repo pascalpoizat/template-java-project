@@ -54,15 +54,15 @@ class VersionPlugin implements Plugin<Project> {
 }
 
 dependencies {
-    testCompile "org.testng:testng:7.3.0"
-    compile "org.apache.logging.log4j:log4j-api:2.5"
-    compile "org.apache.logging.log4j:log4j-core:2.5"
-    compile "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.5.0"
+    testImplementation "org.testng:testng:7.3.0"
+    implementation "org.apache.logging.log4j:log4j-api:2.5"
+    implementation "org.apache.logging.log4j:log4j-core:2.5"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.5.0"
     asciidoctorGems 'rubygems:rouge:3.15.0'
 }
 
 repositories {
-    jcenter()
+    // jcenter() // deprecated
     ruby.gems()
     mavenCentral()
     // you can also use this for your local cache:
@@ -86,13 +86,13 @@ test {
 
 jacoco {
   toolVersion = '0.8.6'
-  reportsDir = file("${buildDir}/reports/jacoco") // this is the default
+  reportsDirectory = file("${buildDir}/reports/jacoco") // this is the default
 }
 
 jacocoTestReport {
     reports {
-        xml.enabled = true // coveralls plugin depends on xml format report
-        html.enabled = true
+        xml.required = true // coveralls plugin depends on xml format report
+        html.required = true
         html.destination = file("${buildDir}/jacocoHtml")
     }
 }
@@ -110,13 +110,13 @@ sonarqube {
 configurations { codacy }
 repositories {
     maven { url "https://jitpack.io" }
-    maven { url "http://dl.bintray.com/typesafe/maven-releases" }
+    maven { url "https://dl.bintray.com/typesafe/maven-releases" }
 }
 dependencies {
     codacy 'com.github.codacy:codacy-coverage-reporter:-SNAPSHOT'
 }
 task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
-    main = "com.codacy.CodacyCoverageReporter"
+    mainClass = "com.codacy.CodacyCoverageReporter"
     classpath = configurations.codacy
     args = [
             "report",
