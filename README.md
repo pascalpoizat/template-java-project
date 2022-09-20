@@ -10,9 +10,9 @@
 
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/pascalpoizat/template-java-project?style=flat-square)](https://codeclimate.com/github/pascalpoizat/template-java-project)
 [![Codacy Project Certification](https://img.shields.io/codacy/grade/9b4c36635f044db0a56f8ee5beddd167.svg?style=flat-square)](https://app.codacy.com/gh/pascalpoizat/template-java-project/dashboard)
-[![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=alert_status)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
-[![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=coverage)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
-[![SonarCloud Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=fr.uparis10.pascalpoizat%3Atemplate-java-project&metric=sqale_index)](https://sonarcloud.io/dashboard?id=fr.uparis10.pascalpoizat%3Atemplate-java-project)
+[![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=fr.parisnanterre.pascalpoizat:template-java-project&metric=alert_status)](https://sonarcloud.io/project/overview?id=fr.parisnanterre.pascalpoizat:template-java-project)
+[![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=fr.parisnanterre.pascalpoizat:template-java-project&metric=coverage)](https://sonarcloud.io/project/overview?id=fr.parisnanterre.pascalpoizat:template-java-project)
+[![SonarCloud Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=fr.parisnanterre.pascalpoizat:template-java-project&metric=sqale_index)](https://sonarcloud.io/project/overview?id=fr.parisnanterre.pascalpoizat:template-java-project)
 <!--
 <br/>
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/pascalpoizat/template-java-project.svg?columns=all)](https://waffle.io/pascalpoizat/template-java-project)
