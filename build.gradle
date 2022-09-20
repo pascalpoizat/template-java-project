@@ -1,10 +1,11 @@
 buildscript {
     dependencies {
-        classpath 'org.apache.maven:maven-core:3.6.3'
-        classpath 'org.jacoco:jacoco-maven-plugin:0.8.6'
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
+        classpath 'org.apache.maven:maven-core:3.8.6'
+        classpath 'org.apache.maven.reporting:maven-reporting-api:3.1.1'
+        classpath 'org.jacoco:jacoco-maven-plugin:0.8.8'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.3'
         // classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
-        classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7'
+        classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3'
         classpath "com.cosminpolifronie.gradle:gradle-plantuml-plugin:1.6.0"
         // classpath "com.github.roroche:plantuml-gradle-plugin:1.0.2"
     }
@@ -85,7 +86,7 @@ test {
 }
 
 jacoco {
-  toolVersion = '0.8.6'
+  toolVersion = '0.8.8'
   reportsDirectory = file("${buildDir}/reports/jacoco") // this is the default
 }
 
