@@ -5,6 +5,7 @@
 .idea
 *.iml
 build/
+target/
 .classpath
 .project
 .settings/
