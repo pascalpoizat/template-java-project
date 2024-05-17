@@ -1,3 +1,9 @@
+
+// Match between Java and Gradle
+// https://docs.gradle.org/current/userguide/compatibility.html
+// Upgrade the wrapper to a version
+// ./gradlew wrapper --gradle-version 8.5
+
 buildscript {
     dependencies {
         classpath 'org.apache.maven:maven-core:3.8.6'
@@ -22,16 +28,28 @@ buildscript {
 plugins {
     // id "org.sonarqube" version "2.6"
     // id 'org.asciidoctor.jvm.convert' version '3.1.0'
-    id 'org.asciidoctor.jvm.pdf' version '3.1.0'
-    id 'org.asciidoctor.jvm.gems' version '3.1.0'
+    
+    // OLD : id 'org.asciidoctor.jvm.pdf' version '3.1.0'
+    id "org.asciidoctor.jvm.pdf" version "4.0.0-alpha.1"
+    // OLD : id 'org.asciidoctor.jvm.gems' version '3.1.0'
+    id "org.asciidoctor.jvm.gems" version "4.0.0-alpha.1"
+
 }
 
+apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'org.sonarqube'
 apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: "com.cosminpolifronie.gradle.plantuml"
+apply plugin: 'maven-publish'
 apply plugin: VersionPlugin
+
+//
+// JAVA
+//
+sourceCompatibility = 21
+targetCompatibility = 21
 
 //
 // TEST
@@ -175,6 +193,11 @@ asciidoctorPdf {
 // }
 
 task asciidoctor(dependsOn: asciidoctorPdf)
+
+// Gradle to Maven
+// see https://www.baeldung.com/gradle-build-to-maven-pom
+publishing {
+}
 
 //
 // TESTS
